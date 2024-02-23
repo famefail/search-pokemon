@@ -1,4 +1,3 @@
-import { IPokemonResponse } from "@/app/graphql/pokemon/pokemon";
 
 export interface IPokemonProps {
     params?: { name: string }

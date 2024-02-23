@@ -4,11 +4,11 @@ const Info = ({ props }: IInfoProps) => {
     const { title, desc } = props
     if (Array.isArray(desc))
         return (
-            <div className="flex py-[8px]" >
+            <div className="flex py-[8px]" data-testid={`${title} ${desc}`}>
                 <h3>{title}: </h3>
                 <div className="flex flex-wrap">
                     {desc.map((des, index) => (
-                        <p className="px-[4px]" key={index}>{des} </p>
+                        <p className="px-[4px]" key={index} >{des} </p>
                     ))}
                 </div >
             </div>

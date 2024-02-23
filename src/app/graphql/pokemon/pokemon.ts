@@ -66,7 +66,7 @@ export interface IPokemonResponse {
     weight: ILength,
     height: ILength,
     classification: string | null,
-    types: [],
+    types: string[],
     resistant: string[] | null,
     weaknesses: string[] | null,
     fleeRate: number | null,

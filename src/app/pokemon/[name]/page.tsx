@@ -21,7 +21,6 @@ const PokemonContainer = ({ params }: { params: { name: string } }) => {
 
   const onClickPic = (name: string | null) => {
     router.push(`./${name}`)
-    console.log(params.name)
   }
   if (loading) {
     return <Loading />
@@ -49,7 +48,7 @@ const PokemonContainer = ({ params }: { params: { name: string } }) => {
             <div>
               <div className="flex items-center border-solid border-2 border-red-500 rounded-full justify-center p-[24px] w-[250px] h-[250px] m-auto">
                 <Image
-                  src={pokemon?.image ?? ''}
+                  src={pokemon?.image ?? '/'}
                   width={150}
                   height={200}
                   alt="Picture of the Pokémon"
