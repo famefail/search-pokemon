@@ -25,7 +25,6 @@ const PokemonContainer = ({ params }: { params: { name: string } }) => {
   }
   if (loading) {
     return <Loading />
-
   }
 
   if (error) {
@@ -46,9 +45,9 @@ const PokemonContainer = ({ params }: { params: { name: string } }) => {
       <div className="flex-col mx-auto my-[32px] p-[20px] shadow-md rounded-md w-[95%] bg-white">
         <h1 className="text-center">Stats</h1>
         <div className="border-solid">
-          <div className="flex p-[20px] gap-[16px] justify-around">
+          <div className="flex-col sm:flex sm:flex-row p-[20px] gap-[16px] justify-around">
             <div>
-              <div className="flex items-center border-solid border-2 border-red-500 rounded-full justify-center p-[24px] w-[250px] h-[250px]">
+              <div className="flex items-center border-solid border-2 border-red-500 rounded-full justify-center p-[24px] w-[250px] h-[250px] m-auto">
                 <Image
                   src={pokemon?.image ?? ''}
                   width={150}
@@ -63,7 +62,7 @@ const PokemonContainer = ({ params }: { params: { name: string } }) => {
               </div>
             </div>
             <div className="w-[75%]">
-              <div className="grid grid-cols-2 ">
+              <div className="sm:grid grid-cols-2 ">
                 <Info props={{ title: 'MaxHP', desc: pokemon?.maxHP }} />
                 <Info props={{ title: 'MaxCP', desc: pokemon?.maxCP }} />
                 <Info props={{ title: 'Classification', desc: pokemon?.classification }} />
@@ -85,7 +84,7 @@ const PokemonContainer = ({ params }: { params: { name: string } }) => {
       </div>
       <div className="flex-col mx-auto my-[32px] p-[20px] shadow-md rounded-md w-[95%] bg-white">
         <h1 className="text-center">Attacks</h1>
-        <div className="flex justify-evenly">
+        <div className="sm:flex justify-evenly">
           <div className="min-w-[250px] rounded">
             <h2 className="bg-red-500 text-center text-slate-50">Fast</h2>
             {pokemon?.attacks?.fast.map((fast, index) => (
@@ -111,7 +110,7 @@ const PokemonContainer = ({ params }: { params: { name: string } }) => {
       {pokemon?.evolutions &&
         <div className="flex-col mx-auto my-[32px] p-[20px] shadow-md rounded-md w-[95%] bg-white">
           <h1 className="text-center">Evolutions</h1>
-          <div className="flex justify-evenly">
+          <div className="sm:flex justify-evenly text-center">
             {pokemon?.evolutions?.map((evolution, index) => (
               <div key={index}>
                 <button onClick={() => onClickPic(evolution?.name)}>

@@ -18,7 +18,7 @@ const SearchInput = () => {
             <div className=" p-[12px] justify-between items-center m-auto">
                 <h1 className="text-center">SEARCH POKEMON</h1>
                 <div className='flex gap-[12px]'>
-                    <input onChange={onChangeSearch} className="rounded-lg p-[12px] focus:border-2 focus:border-red-500" placeholder="search your pokemon..." />
+                    <input onChange={onChangeSearch} className="rounded-lg p-[12px] border-solid focus:border-2 focus:border-red-500" placeholder="search your pokemon..." />
                     <button className=''
                         onClick={onClickSearch}
                     > search </button>
