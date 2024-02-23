@@ -8,8 +8,9 @@ import SearchInput from "@/app/component/searchInput";
 import { useRouter } from "next/navigation";
 import Loading from "@/app/component/loading";
 import NotFound from "@/app/component/notFound";
+import { IPokemonProps } from "./interface";
 
-const PokemonContainer = ({ params }: { params: { name: string } }) => {
+const PokemonContainer = ({ params }: IPokemonProps) => {
 
   const { loading, error, data } = useQuery<IPokemonResponse>(GET_POKEMON, {
     variables: { name: params.name }

@@ -1,7 +1,7 @@
 
 import { render } from '@testing-library/react/';
 import { MockedProvider } from '@apollo/client/testing';
-import { GET_POKEMON, IPokemonResponse } from '@/app/graphql/pokemon/pokemon';
+import { GET_POKEMON } from '@/app/graphql/pokemon/pokemon';
 import PokemonContainer from '@/app/pokemon/[name]';
 import { useQuery } from '@apollo/client';
 import { BulbasaurResponse, charmanderResponse, squirtleResponse } from './mockPokemon..test';
